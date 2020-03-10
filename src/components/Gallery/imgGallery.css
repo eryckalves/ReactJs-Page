@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+:root{
+    --imgGallery-sec-font:'Poppins', sans-serif;
+}
+
+.imgGallery-section
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.imgGalley-item
+{
+    padding: 10px 5px;
+    width: 100%;
+}
+
+.imgGalley-item p
+{
+    font-size: 13px;
+    font-family: var(--imgGallery-sec-font);
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.imgGalley-item img
+{
+    width: 280px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.imgGalley-item img:hover
+{
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+@media screen and (min-width:768px)
+{
+    .imgGallery-section
+    {
+        flex-direction: initial;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px,300px) );
+        grid-gap: 6px;
+        grid-auto-flow: dense;
+        justify-content: center;
+        align-items: flex-end;
+    }   
+    .imgGalley-item img
+    {
+        width: 300px;
+    }
+}

@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 import './Homepage.css';
-import {Grid , Cell, Button } from 'react-mdl'
+import {Grid , Cell } from 'react-mdl'
 import avatar from '../../images/eryckalves.jpg'; // Tell webpack this JS file uses this image
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookSquare , faReact, faHtml5 , faCss3 , faYoutubeSquare , faInstagram ,faTwitter, faLaravel } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookSquare , faReact, faHtml5 , faCss3 , faYoutubeSquare , faInstagram ,faTwitter, faLaravel } from '@fortawesome/free-brands-svg-icons';
+import Button from '@material-ui/core/Button';
 
 export class Homepage extends Component {
     render() {
         return (
             <div className="homepage">
-                <Grid className="homepage-grip">
+                <Grid className="homepage-grid">
                     <Cell className="homepage-Cell" col={12}>
                         <div className="avatar-section-img">
                             <img col1="col1" className="avatar-img" src={avatar} alt=""/>
@@ -37,12 +38,13 @@ export class Homepage extends Component {
                                     <a href="/"><FontAwesomeIcon className="avatar-icon" icon={faInstagram} /></a>
                                     <a href="/"><FontAwesomeIcon className="avatar-icon" icon={faTwitter} /></a>
                             </div>
-                        </div>
-                        <div col3="col3" className="codes-section">
+                        </div>                        
+                    </Cell>
+                    <Cell className="codes-section" col={12}>
+                        <div>
                             <h1> Codes GibHub</h1>
-                            <a href="https://github.com/eryckalves" target="_blank" rel="noopener noreferrer"><Button className="codes-button" raised>Site</Button></a>
+                            <a href="https://github.com/eryckalves" target="_blank" rel="noopener noreferrer"><Button className="codes-button">Site</Button></a>
                         </div>
-                        
                     </Cell>
                 </Grid>
             </div>

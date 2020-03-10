@@ -3,14 +3,16 @@
     width: 100%;
 }
 
-.homepage-grip
+.homepage-grid
 {
     height: 100%;
     background: url("../../images/homepagebg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 5rem 8px !important;
+    padding-top: 6rem !important;
+    padding-bottom: 0 !important;
+    display: flex !important;
 }
 
 .homepage-Cell
@@ -18,6 +20,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 500px;
 }
 
 .avatar-section-img
@@ -117,9 +120,15 @@
     margin: auto;
 }
 
+.homepage-Card
+{
+    min-height: 400px !important;
+}
+
 .codes-section
 {
-    padding-top: 3rem;
+    padding-top: 20rem;
+    padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -145,16 +154,24 @@
 
 .codes-button
 {
-    width: 250px;
-    color: #ffffff !important;
-    font-weight: bold !important;
+    background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+    border: 0;
+    border-radius: 3;
+    box-shadow: 0 3px 5px 2px rgba(255, 105, 135, .3);
+    color: white !important;
+    height: 48px;
+    padding: 0 30px;
+    font-weight: bolder !important;
+    width: 100% !important;
+    font-size: 1.1rem !important;
+    letter-spacing: 1px !important;
 }
 
-.codes-button:hover,
-.codes-button:focus
-{
-    box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.5);
-}
+
+
+
+
+
 
 @media screen and (min-width:678px)
 {
@@ -172,5 +189,16 @@
     {
         padding: 0 1rem;
     }
+
+    .social-media
+    {
+        width: 40%;
+    }
+
+    .codes-section{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
 
 }
