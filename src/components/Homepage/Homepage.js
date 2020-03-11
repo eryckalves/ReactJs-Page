@@ -36,7 +36,7 @@ export class Homepage extends Component {
                             </Cell>
                             <Cell className="homepage-card-item" col={4}>
                                 <div className="">
-                                    <h1>FULLSTACK</h1>
+                                    <h1>fullStack</h1>
                                     <span>A full stack web developer is a person who can develop both client and server software.</span>
                                 </div>                       
                             </Cell>
