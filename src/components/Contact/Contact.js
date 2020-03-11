@@ -1,14 +1,44 @@
 import React, { Component } from 'react'
 import "./Contact.css"
 import SimpleMap from "./GoogleMaps"
-import { TextField , Paper, Button } from '@material-ui/core';
+import { TextField , Paper, Button, GridList ,GridListTile } from '@material-ui/core';
+import  SimpleReactLightbox  from "simple-react-lightbox";
+import  {SRLWrapper }  from "simple-react-lightbox";
 import contactImg1 from "../../images/Contact1.jpg";
 import contactImg2 from "../../images/Contact2.jpg";
+import contactImg3 from "../../images/Contact3.jpg";
+import contactImg4 from "../../images/Contact4.jpg";
 
 export class Contact extends Component {
 
-    render() {
 
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+        }
+    }
+    
+
+    render() { 
+        const tileData = [
+                            {
+                                img: contactImg1,
+                                title: "contact1"
+                            },
+                            {
+                                img: contactImg2, 
+                                title: "contact2"
+                            },
+                            {
+                                img: contactImg3,
+                                title: "contact3"
+                            },
+                            {
+                                img: contactImg4,
+                                title: "contact4"
+                            }
+                        ]
         return (
             <div className="contact-section">
                 <h1>Contact</h1>
@@ -35,8 +65,19 @@ export class Contact extends Component {
                         </div>
                     </div>
                     <div className="expasionPanel-content">
-                        <img src={contactImg1} alt=""/>
-                        <img src={contactImg2} alt=""/>
+                        <SimpleReactLightbox>
+                            <SRLWrapper>
+                                <GridList cellHeight={160} className="" cols={2}>
+                                {tileData.map(tile => (
+                                <GridListTile key={tile.img} cols={tile.cols || 2}>
+                                <a href={tile.img} data-attribute="SRL">
+                                    <img src={tile.img} alt={tile.title} />
+                                </a>
+                                </GridListTile>
+                                ))}
+                                </GridList>
+                            </SRLWrapper>
+                        </SimpleReactLightbox>
                     </div>
                 </div>
             </div>
