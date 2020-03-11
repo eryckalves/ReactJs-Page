@@ -54,4 +54,15 @@
     {
         flex-direction: initial;
     } 
+
+    .card-item
+    {
+        display: flex;
+        padding: 10px 10px;
+    }
+
+    .Card
+    {
+        margin: 10px 10px;
+    }
 }

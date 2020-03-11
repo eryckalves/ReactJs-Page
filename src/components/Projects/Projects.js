@@ -45,6 +45,15 @@ export class Projects extends Component {
                                     <a href="https://github.com/eryckalves/laravel_portifolio/"><Button colored>GitRuB CodE</Button></a>
                                 </CardActions>
                             </Card>
+                            <Card className="Card" >
+                                <CardTitle className="img-card" expand style={{color: '#fff', background: 'url(' + cardImgLaravel  +') center / cover #010a43' , height: "300px"}}><h1>LaraveL</h1></CardTitle>
+                                <CardText className="card-txt">
+                                    Language used Laravel, JavaScript , CSS3 , HTML5 , Bootrap, Font-Awesome, Vue.JS ,AWS S3, AJAX and MailTrap.
+                                </CardText>
+                                <CardActions border>
+                                    <a href="https://github.com/eryckalves/Site_project_eryckalves/"><Button colored>GitRuB CodE</Button></a>
+                                </CardActions>
+                            </Card>
                         </div>
                     </div>
                 )

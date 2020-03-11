@@ -5,6 +5,7 @@ import avatar from '../../images/eryckalves.jpg'; // Tell webpack this JS file u
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookSquare , faReact, faHtml5 , faCss3 , faYoutubeSquare , faInstagram ,faTwitter, faLaravel ,faBootstrap } from '@fortawesome/free-brands-svg-icons';
 import Button from '@material-ui/core/Button';
+import Charts from "../Charts/Charts"
 
 export class Homepage extends Component {
     render() {
@@ -38,7 +39,10 @@ export class Homepage extends Component {
                                 <div className="">
                                     <h1>fullStack</h1>
                                     <span>A full stack web developer is a person who can develop both client and server software.</span>
-                                </div>                       
+                                </div>
+                                <div className="homepage-card-item-chart">
+                                    <Charts />
+                                </div>
                             </Cell>
                         </Cell>
                     </div>
