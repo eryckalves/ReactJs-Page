@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+:root
+{
+    --homepage-main-font:'Montserrat', sans-serif;
+    --homepage-sec-font:'Roboto Mono', monospace;
+}
+
 .homepage
 {
     width: 100%;
@@ -20,14 +29,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 500px;
 }
 
 .avatar-section-img
 {
     display: flex;
     justify-content: center;
-    transform: translateY(1%);
     padding-bottom: 1rem;
 }
 
@@ -37,97 +44,87 @@
     border-radius: 300px;
 }
 
-.banner-text
+.homepage-card
 {
-    padding: 3rem 0;
-    background: #ffffff;
-    opacity: 0.8;
-    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.homepage-card-items
+{
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
 }
 
-.banner-text h1
+.homepage-card-item
 {
-    position: relative;
-    font-size: 2rem;
-    letter-spacing: 2px;
-    color: #000000;
-    text-transform: uppercase;
-    margin: auto;
-}
-
-.banner-text h1:before
-{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: #000000;
-    top:100%;
-    left:0;
-}
-
-.banner-text hr
-{
-    border-top: 5px solid #000000;
-    width: 80%;
-    margin: auto;
-}
-
-.banner-text p
-{
-    font-size: 1rem;
-    padding: 1rem;
-    text-align: center;
-}
-
-.avatar-icon
-{
-    font-size: 3rem;
-    color: #000000;
-}
-
-.avatar-section-icon
-{
-    margin: 0 24px 24px 24px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
-.avatar-item-icon
+.homepage-card-item h1
 {
+    font-size: 2.8rem;
+    position: relative;
+    font-family: var(--homepage-main-font);
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.homepage-card-item h1::before
+{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 100%;
+    left: 0%;
+    background: #1a2a6c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.homepage-card-item span
+{
+    font-family: var(--homepage-sec-font);
+    color: rgba(0, 0, 0, .8);
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.homepage-card-item a
+{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 0px 5px 0;
     display: flex;
     align-items: center;
-    padding: 1rem 0;
+    transition: all 0.4s ease;
 }
 
-.avatar-section-icon span
+.homepage-card-item a:hover
 {
-    padding-left: 1rem;
-    font-weight: bold;
+    color: black;
+    transition: all 0.4s ease;
+    transform: scale(1.3);
 }
 
-.social-media
-{
-    padding-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: auto;
-}
 
-.homepage-Card
+.homepage-card-item-icon
 {
-    min-height: 400px !important;
+    font-size: 4rem;
+    padding-right: 5px;
 }
 
 .codes-section
 {
-    padding-top: 20rem;
+    padding-top: 1rem;
     padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
@@ -136,20 +133,25 @@
 
 .codes-section h1
 {
-    font-size: 3rem;
-    color: #ffffff;
+    font-size: 2.3rem;
     position: relative;
+    font-family: var(--homepage-main-font);
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
 .codes-section h1:before
 {
     content: "";
     position: absolute;
-    width: 100%;
     height: 2px;
-    background: #ffffff;
-    top:100%;
-    left:0;
+    width: 100%;
+    top: 100%;
+    left: 0%;
+    background: #1a2a6c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .codes-button
@@ -169,30 +171,20 @@
 
 @media screen and (min-width:678px)
 {
-    .banner-text
+    .homepage-card-items
     {
-        width: 30%;
-    }
-
-    .avatar-section-icon
-    {
+        display: flex;
         flex-direction: initial;
+        align-items: flex-start;
     }
 
-    .avatar-item-icon
+    .homepage-card-item
     {
-        padding: 0 1rem;
+       align-items: flex-start;
     }
-
-    .social-media
-    {
-        width: 40%;
-    }
-
+    
     .codes-section{
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-top: 1rem;
+        padding-bottom: 7rem;
     }
-
-
 }
