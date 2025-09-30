@@ -15,7 +15,7 @@
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
     "google-map-react": "^1.1.6",
-    "lodash-es": "^4.17.15",
+    "lodash-es": "^4.17.21",
     "material-ui-icons": "^1.0.0-beta.36",
     "react": "^16.13.0",
     "react-bootstrap": "^1.0.0-beta.17",
